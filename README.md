@@ -1,5 +1,22 @@
 # Job Queue Application
 
+## Running the App
+
+Application is prepared to run in Docker containers.
+If you have Docker installed already, you can run:
+
+    make compose-prod
+
+After you're done with testing the application, you can stop and remove containers:
+
+    make compose-prod-down
+
+
+Application should be available on `http://localhost:3000/`.
+
+
+## Task
+
 - Task: Implement a JavaScript frontend and Python backend to process images to text.
 - Position: Learning and Development Devops Automation Engineer
 
