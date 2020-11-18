@@ -1,22 +1,22 @@
 version: '3.7'
 services:
-  frontend:
-    container_name: frontend
+  frontend-prod:
+    container_name: frontend-prod
     build:
       context: ./frontend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     command: npm start
     ports:
       - "3000:3000"
     volumes:
       - ./frontend:/app
     depends_on:
-        - backend
-  backend:
-    container_name: backend
+        - backend-prod
+  backend-prod:
+    container_name: backend-prod
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     ports:
       - "5000:5000"
     environment:
